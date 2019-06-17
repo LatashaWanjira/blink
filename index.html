@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="shortcut icon" href="img/logo.png">
+        <title>Blink</title>
+
+        <!-- Google Fonts CDN -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+        <!-- Ionicons CDN -->
+        <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
+
+        <!-- Fontawesome CDN -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+        <!-- Slick JS Stylesheet CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+
+        <!-- Date Range Picker CSS CDN -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="styles/main.css">
+
+        <!-- JQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+        <!-- Slick JS Script CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+
+        <!-- Moment JS CDN -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+
+        <!-- Date Range Picker CDN -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+        <!-- Custom JS -->
+        <script type="text/javascript" src="scripts/main.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="nav-logo">
+                    <img src="img/logo.png" alt="Blink">
+                </div>
+                <ul class="navlinks">
+                    <li class="active"><a href="index.html">Summary</a></li>
+                    <li><a href="javascript:void(0)">Activity</a></li>
+                    <li><a href="javascript:void(0)">Accounts</a></li>
+                </ul>
+                <a href="javascript:void(0)" class="logout"><i class="icon ion-md-power"></i> Logout</a>
+                <div class="dropdown">
+                    <a href="javascript:void(0)" class="dropdown-toggle"><i class="icon ion-md-more" id="toggle"></i></a>
+                    <nav class="dropdown-list">
+                        <ul class="side-menu">
+                            <li><a href="index.html" class="side-link">Summary</a></li>
+                            <li><a href="javascript:void(0)" class="side-link">Activity</a></li>
+                            <li><a href="javascript:void(0)" class="side-link">Accounts</a></li>
+                            <li><a href="javascript:void(0)" class="side-link">Logout</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="content">
+                <div class="dashboard">
+                    <div class="column">
+                        <h2 class="user-greeting">Good Afternoon, Mary</h2>
+                        <br>
+                        <h4>Select an Account</h4>
+                        <div class="children-row">
+                            <div>
+                                <a href="javascript:void(0)" class="acc-card">
+                                <i class="icon ion-md-add"></i>
+                                <p>New</p>
+                            </a>
+                            </div>
+                            <div>
+                                <a href="javascript:void(0)" class="acc-card">
+                                <img src="img/john-doe.jpeg" alt="">
+                                <p>Tom</p>
+                            </a>
+                            </div>
+                            <div>
+                                <a href="javascript:void(0)" class="acc-card">
+                                <img src="img/jane-doe.jpeg" alt="">
+                                <p>Mary</p>
+                            </a>
+                            </div>
+                            <div>
+                                <a href="javascript:void(0)" class="acc-card">
+                                <img src="img/jane-doe.jpeg" alt="">
+                                <p>Ann</p>
+                            </a>
+                            </div>
+                        </div>
+                        <div class="dash-card">
+                            <div class="child-info">
+                                <img src="img/john-doe.jpeg" alt="">
+                                <div class="child-id">
+                                    <h4>John Doe</h4>
+                                    <p>1234 5678 1234 0987</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="balance">
+                                <h3 class="orange">Blink Balance</h3>
+                                <h1>Ksh 1,234</h1>
+                            </div>
+                            <div class="acc-options">
+                                <a href="javascript:void(0)">
+                                  <img src="icons/cash-in-hand.png" alt="">
+                                  Add Funds
+                                </a>
+                                <a href="javascript:void(0)">
+                                  <img src="icons/settings.png" alt="">
+                                  Account Management
+                                </a>
+                                <a href="javascript:void(0)" id="myBtn">
+                                  <img src="icons/freeze.png" alt="">
+                                  Freeze Account
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2>Are you sure you want to freeze this account?</h2>
+                            <div class="child-info">
+                                <img src="img/john-doe.jpeg" alt="">
+                                <div class="child-id">
+                                    <h4>John Doe</h4>
+                                    <p>1234 5678 1234 0987</p>
+                                </div>
+                            </div>
+                            <div class="btn-container">
+                                <button type="button" name="button" class="btn btn-alt">Back</button>
+                                <button type="button" name="button" class="btn btn-red" id="freeze">Freeze</button>
+                            </div>
+                            <div class="freeze-duration">
+                                <hr>
+                                <input type="text" name="datefilter" value="" placeholder="Set duration" class="datePicker" />
+                                <br>
+                                <input type="checkbox" name="" value="" class="checkbox1"> Freeze account indefinitely
+                                <div class="btn-container">
+                                    <button type="button" name="button" class="btn btn-alt">Back</button>
+                                    <button type="button" name="button" class="btn btn-red">Done</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="column">
+                        <div class="dash-card" id="recentActivity">
+                            <h4 class="orange">Recent Activity<i class="icon ion-md-arrow-forward"></i></h4>
+                            <div id="transactions">
+                                <div class="transaction">
+                                    <div class="transaction-details">
+                                        <img src="icons/cash-in-hand.png" alt="">
+                                        <div>
+                                            <h4>Soin Corner Shop</h4>
+                                            <p>Transaction payment</p>
+                                        </div>
+                                    </div>
+                                    <div class="transaction-amount">
+                                        <h3>-Ksh 300</h3>
+                                        <p class="date">May 10</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="transaction">
+                                    <div class="transaction-details">
+                                        <img src="icons/cash-in-hand.png" alt="">
+                                        <div>
+                                            <h4>You</h4>
+                                            <p>Balance Top Up</p>
+                                        </div>
+                                    </div>
+                                    <div class="transaction-amount">
+                                        <h3 class="green">+Ksh 500</h3>
+                                        <p class="date">May 10</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="transaction">
+                                    <div class="transaction-details">
+                                        <img src="icons/cash-in-hand.png" alt="">
+                                        <div>
+                                            <h4>Soin Corner Shop</h4>
+                                            <p>Transaction payment</p>
+                                        </div>
+                                    </div>
+                                    <div class="transaction-amount">
+                                        <h3>-Ksh 100</h3>
+                                        <p class="date">May 10</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="transaction">
+                                    <div class="transaction-details">
+                                        <img src="icons/cash-in-hand.png" alt="">
+                                        <div>
+                                            <h4>Soin Corner Shop</h4>
+                                            <p>Transaction payment</p>
+                                        </div>
+                                    </div>
+                                    <div class="transaction-amount">
+                                        <h3>-Ksh 200</h3>
+                                        <p class="date">May 10</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="transaction">
+                                    <div class="transaction-details">
+                                        <img src="icons/cash-in-hand.png" alt="">
+                                        <div>
+                                            <h4>You</h4>
+                                            <p>Balance Top Up</p>
+                                        </div>
+                                    </div>
+                                    <div class="transaction-amount">
+                                        <h3 class="green">+Ksh 700</h3>
+                                        <p class="date">May 10</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="transaction">
+                                    <div class="transaction-details">
+                                        <img src="icons/cash-in-hand.png" alt="">
+                                        <div>
+                                            <h4>Soin Corner Shop</h4>
+                                            <p>Transaction payment</p>
+                                        </div>
+                                    </div>
+                                    <div class="transaction-amount">
+                                        <h3>-Ksh 200</h3>
+                                        <p class="date">May 10</p>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- <footer></footer> -->
+    </body>
+
+</html>

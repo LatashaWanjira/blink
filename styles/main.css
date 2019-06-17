@@ -1,0 +1,433 @@
+:root {
+  --primary: #F16425;
+  --background: #FFF5EB;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+
+input {
+  font-size: 1em;
+  border: 0;
+  border-bottom: 1px solid #A1A1A1;
+  /*width: 100%;*/
+  padding: 0.5em 0.2em;
+  margin: 0.5em 0;
+}
+
+.orange {
+  color: var(--primary);
+}
+
+.green {
+  color: green;
+}
+
+.btn {
+  padding: 0.5em 2em;
+}
+
+.btn-red {
+  background: #fa0000;
+  color: white;
+  border: 1px solid #fa0000;
+}
+
+.btn-alt {
+  background: white;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.dashboard h1, .dashboard h2, .dashboard h3, .dashboard h4, .dashboard h5, .dashboard h6, .dashboard p {
+  margin: 0;
+}
+
+nav.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 0.2em 10%;
+  display: flex;
+  align-items: center;
+  background: var(--primary);
+  color: white;
+  font-size: 1.2em;
+}
+
+.nav-logo img {
+  height: 35px;
+}
+
+ul.navlinks {
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+ul.navlinks li a {
+  margin: 0 1em;
+  padding-bottom: 0.2em;
+}
+
+ul.navlinks li.active a {
+  border-bottom: 1px solid white;
+}
+
+.logout {
+  float: right;
+  position: absolute;
+  right: 10%;
+}
+
+.dropdown {
+  display: none;
+}
+
+.dropdown-list {
+  display: none;
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  background: var(--primary);
+  right: 0;
+}
+
+ul.side-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-list li {
+  color: white;
+  border-bottom: 1px solid white;
+  width: 100%;
+  padding: 0.5em 1.5em;
+  font-size: 0.8em;
+}
+
+.content {
+  margin-top: 4em;
+  padding: 2em 10% 3em;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: stretch;
+  grid-gap: 3em;
+}
+
+.user-greeting {
+  font-weight: 400;
+}
+
+.children-row {
+  margin: 1em 0;
+}
+
+.children-row a:hover p {
+  transition: 0.3s;
+  color: var(--primary);
+}
+
+.children-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+button.slick-prev.pull-left {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -30px;
+  background: var(--primary);
+  color: white;
+  border: 0;
+  border-radius: 50%;
+  padding: 0.2em 0.6em;
+}
+
+button.slick-next.pull-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -10px;
+  background: var(--primary);
+  color: white;
+  border: 0;
+  border-radius: 50%;
+  padding: 0.2em 0.6em;
+}
+
+button.slick-disabled {
+  display: none !important;
+}
+
+.acc-card {
+  background: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  margin: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.acc-card i {
+  background: var(--primary);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  height: 45px;
+  width: 45px;
+  font-size: 20px;
+  padding: 11px 17px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+.acc-card p {
+  margin: 0;
+}
+
+.acc-card img {
+  height: 45px;
+  width: 45px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+.dash-card {
+  background: white;
+  padding: 2em;
+  box-shadow: 0px 10px 10px 5px rgba(50, 50, 50, 0.2);
+  height: 100%;
+}
+
+.child-info {
+  display: flex;
+  align-items: center;
+}
+
+.child-info img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  margin: 0 1em 0.5em 0;
+}
+
+.balance {
+  padding-top: 2em;
+}
+
+.balance h1 {
+  font-weight: 300;
+  font-size: 2.8em;
+}
+
+.acc-options {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3em;
+  text-align: center;
+}
+
+.acc-options a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.acc-options a:hover {
+  color: var(--primary);
+}
+
+.acc-options a:hover img {
+  transform: scale(1.2);
+}
+
+.acc-options img {
+  background: #E7ECEF;
+  height: 60px;
+  width: 60px;
+  padding: 10px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+/*MODAL*/
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 20% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  position: relative;
+  transform: translateY(-50%);
+  animation: animatetop 1s;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* The Close Button */
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.freeze-duration {
+  display: none;
+}
+
+@keyframes animatetop {
+  0% {
+    top: -50%;
+    opacity: 0
+  }
+  100% {
+    top: 0;
+    opacity: 1
+  }
+}
+
+@-webkit-keyframes animatetop {
+  0% {
+    top: -50%;
+    opacity: 0
+  }
+  100% {
+    top: 0;
+    opacity: 1
+  }
+}
+
+#recentActivity>h4 {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.transaction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.transaction h3, .transaction h4, .transaction p {
+  margin: 0;
+}
+
+.transaction-details {
+  display: flex;
+  align-items: center;
+}
+
+.transaction img {
+  background: #E7ECEF;
+  height: 60px;
+  width: 60px;
+  padding: 10px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  margin-right: 1em;
+}
+
+.transaction-amount {
+  text-align: right;
+}
+
+@media only screen and (max-width: 425px) {
+  /*.acc-card {
+    width: 80px;
+    height: 80px;
+  }
+  .acc-card i {
+    height: 35px;
+    width: 35px;
+    padding: 6px 12px;
+  }
+  .acc-card img {
+    width: 35px;
+    height: 35px;
+  }*/
+  .transaction img {
+    height: 40px;
+    width: 40px;
+    padding: 7px;
+  }
+  nav.navbar {
+    justify-content: space-between;
+    padding: 0.3em 10%;
+  }
+  .nav-logo img {
+    margin-top: 0.3em;
+    height: 25px;
+  }
+  ul.navlinks, .logout {
+    display: none;
+  }
+  .dropdown {
+    display: block;
+  }
+  .content {
+    margin-top: 3em;
+  }
+  button.slick-prev.pull-left {
+    left: -20px;
+  }
+  button.slick-next.pull-right {
+    right: -25px;
+  }
+  .dash-card {
+    padding: 2em 1em;
+  }
+}
